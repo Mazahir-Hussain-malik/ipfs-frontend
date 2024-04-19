@@ -8,6 +8,7 @@ import { HiDotsVertical } from "react-icons/hi";
 
 import backendContractAbi from "../abis/uploadBackend.json";
 import { backendContractAddress } from '../config';
+import "./Global.css";
 
 const Starred = () => {
  const [userFiles, setUserFiles] = useState([]);
@@ -66,7 +67,7 @@ const Starred = () => {
 
  if (!isConnected) {
       return (
-          <div className="bg-black min-h-screen p-4">
+          <div className=" min-h-screen p-4 files">
               <button className="text-white" onClick={connect}>Connect Wallet</button>
           </div>
       );
