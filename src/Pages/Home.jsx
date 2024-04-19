@@ -96,14 +96,14 @@ const Home = () => {
 
   if (!isConnected) {
     return (
-      <div className=" min-h-screen p-4 files shadow-2xl  ">
-        <img src="/logo-dark.svg" alt="" className="w-[80px] cursor-pointer " />
+      <div className=" min-h-screen p-4 files shadow-2xl flex justify-center items-center  ">
+        {/* <img src="/logo-dark.svg" alt="" className="w-[80px] cursor-pointer " /> */}
         {/* <button className="text-white" onClick={connect}>Connect Wallet</button> */}
-        <div className={` flex justify-center items-center text-[#fff] md:text-[30px] text-[18px] font-semibold   bg-red-900 md:w-[60%]  w-[90%] h-[400px] shadow-2xl rounded-[40px] mx-auto relative ${ warning ? " block" : "hidden"} `}>
+        <div className={` flex justify-center items-center text-[#fff]  font-semibold   bg-gradient-to-r from-emerald-600 to-teal-600 md:w-[20%]  w-[95%] h-[300px] shadow-2xl rounded-[40px] mx-auto relative text-[14px]  ${ warning ? " block" : "hidden"} `}>
         <span onClick={() => setWarning(!warning)} className=" cursor-pointer absolute right-5 top-2">
             <RxCross2 />
         </span>
-          <p>“connect your wallet to start your account”</p>
+          <p>connect your wallet to start your account</p>
         </div>
       </div>
     );
