@@ -1,8 +1,7 @@
-
 import { HiHome, HiStar, HiTrash, HiCloud } from "react-icons/hi2";
 import "./Global.css";
 // import WalletInfo from "../PopUps/WalletInfo";
-import {PropTypes} from "prop-types";
+import { PropTypes } from "prop-types";
 
 // const Navbar = ({isOpen}) => {
 //   const {open} = useWeb3Modal();
@@ -17,7 +16,7 @@ import {PropTypes} from "prop-types";
 //         <img src="/logo.svg" alt="" className=" w-[200px]" />
 //       </div>
 //       <ul className={`${show ? "flex md:gap-[2rem] gap-[1rem] md:flex-row flex-col md:mx-0 mx-8" : " md:flex gap-[2rem] hidden" } ` }>
-//         <Link to="/upload" 
+//         <Link to="/upload"
 //         className="text-[16px] hover:text-blue-800 hover:scale-105 transition-all bg-[#1f6093] rounded-lg text-cyan-100 ease-linear delay-150 p-2">
 //           <img src="/upload.png" alt=""  />
 //           Upload
@@ -27,7 +26,7 @@ import {PropTypes} from "prop-types";
 //           <button className="flex gap-[0.4rem] items-center justify-center bg-[#1f6093] px-[8px] py-[4px] text-[16px] font-normal text-cyan-100 hover:bg-blue-500 transition-all rounded-lg ease-linear delay-200"
 //           onClick={open()}>
 //             <img src="/circum_wallet.svg" alt="diamond" /> CONNECT WALLET
-//           </button> : 
+//           </button> :
 //           <button
 //           className="flex gap-[0.4rem] items-center justify-center bg-[#1f6093] px-[8px] py-[4px] text-[16px] font-normal text-cyan-100 hover:bg-blue-500 transition-all rounded-lg ease-linear delay-200"
 //           onClick={() =>{ disconnect()}}>
@@ -43,56 +42,98 @@ import {PropTypes} from "prop-types";
 //   );
 // };
 
-const Sidebar = ({ isOpen, toggleSidebar, setCurrentPage, setUploadElem, openUpload }) => {
- const handleLinkClick = (page) => {
+const Sidebar = ({
+  isOpen,
+  toggleSidebar,
+  setCurrentPage,
+  setUploadElem,
+  openUpload,
+}) => {
+  const handleLinkClick = (page) => {
     setCurrentPage(page);
     toggleSidebar(false); // Close the sidebar on mobile
- };
+  };
 
- return (
+  return (
     <>
-      <div className={` glass w-64 min-h-screen items center p- lg:block ${isOpen ? 'block' : 'hidden'}`}>
+      <div
+        className={` glass w-64 min-h-screen items center p- lg:block ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
         <ul className="space-y-4 flex flex-col justify-center items-center gap-[1rem] py-[2rem] transition-all ease-linear delay-150">
           <li>
-            <button className="flex items-center space-x-2 text-white   bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150" onClick={() => setUploadElem(!openUpload)}>
+            <button
+              className="flex items-center space-x-2 text-white   bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150"
+              onClick={() => setUploadElem(!openUpload)}
+            >
               <HiCloud className="h-5 w-5" />
               <span>Add File</span>
             </button>
           </li>
           <li>
-            <a href="#" onClick={() => handleLinkClick('Home')} className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150">
+            <a
+              href="#"
+              onClick={() => handleLinkClick("Home")}
+              className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150"
+            >
               <HiHome className="h-5 w-5" />
               <span>Home</span>
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => handleLinkClick('Starred')} className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150">
+            <a
+              href="#"
+              onClick={() => handleLinkClick("Starred")}
+              className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150"
+            >
               <HiStar className="h-5 w-5" />
               <span>Starred</span>
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => handleLinkClick('Trash')} className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150">
+            <a
+              href="#"
+              onClick={() => handleLinkClick("Trash")}
+              className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150"
+            >
               <HiTrash className="h-5 w-5" />
               <span>Trash</span>
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => handleLinkClick('Storage')} className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150">
+            <a
+              href="#"
+              onClick={() => handleLinkClick("Storage")}
+              className="flex items-center space-x-2 text-white   hover:bg-gradient-to-r from-blue-500 via-blue-600 to-blue-500   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150"
+            >
               <HiCloud className="h-5 w-5" />
               <span>Storage</span>
             </a>
           </li>
           <li>
             <button className="flex items-center space-x-2 text-white  bg-[#164e63] hover:scale-105   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150 border-2 border-[#059669]">
-              
               Ai optimization
             </button>
+          </li>
+          <li>
+          
+            <div className="w-[180px] bg-gray-200 rounded-full h-2.5 mb-0 dark:bg-gray-700">
+              <div
+                className="bg-green-600 h-2.5 rounded-full dark:bg-green-500"
+                style={{
+                  width : "45%"
+                }}
+              ></div>
+            </div>
+            <div className="mb-0 text-base font-medium text-green-700 dark:text-green-500">
+            0 to 10 gb
+            </div>
           </li>
         </ul>
       </div>
     </>
- );
+  );
 };
 
 Sidebar.propTypes = {
@@ -103,5 +144,4 @@ Sidebar.propTypes = {
   openUpload: PropTypes.bool,
 };
 
-
-export default Sidebar
+export default Sidebar;
