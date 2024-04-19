@@ -33,7 +33,7 @@ const Navbar = ({ toggleSidebar }) => {
             </button> 
         :
 
-        <button onClick={() => open()} className=" flex items-center space-x-2 text-white  bg-[#164e63] hover:scale-105   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150 border-2 border-[#059669]">
+        <button onClick={() => open()} className=" flex items-center space-x-2 text-white  bg-[#059669] hover:scale-105   focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 transition-all ease-linear delay-150 border-2 border-[#059669]">
           Connect Wallet
         </button>
         }
